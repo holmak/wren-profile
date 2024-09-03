@@ -323,6 +323,7 @@
     <ClInclude Include="..\..\deps\wren\src\vm\wren_utils.h" />
     <ClInclude Include="..\..\deps\wren\src\vm\wren_value.h" />
     <ClInclude Include="..\..\deps\wren\src\vm\wren_vm.h" />
+    <ClInclude Include="..\..\heapProfiler\heapProfiler.h" />
     <ClInclude Include="..\..\src\cli\modules.h" />
     <ClInclude Include="..\..\src\cli\path.h" />
     <ClInclude Include="..\..\src\cli\stat.h" />
@@ -377,6 +378,7 @@
     <ClCompile Include="..\..\deps\wren\src\vm\wren_utils.c" />
     <ClCompile Include="..\..\deps\wren\src\vm\wren_value.c" />
     <ClCompile Include="..\..\deps\wren\src\vm\wren_vm.c" />
+    <ClCompile Include="..\..\heapProfiler\heapProfiler.c" />
     <ClCompile Include="..\..\src\cli\main.c" />
     <ClCompile Include="..\..\src\cli\modules.c" />
     <ClCompile Include="..\..\src\cli\path.c" />
@@ -390,6 +392,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\heapProfiler\heapProfiler.wren.inc" />
     <None Include="..\..\src\module\io.wren.inc" />
     <None Include="..\..\src\module\os.wren.inc" />
     <None Include="..\..\src\module\repl.wren.inc" />

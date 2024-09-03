@@ -192,6 +192,9 @@
     <ClInclude Include="..\..\src\module\scheduler.h">
       <Filter>src\module</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\heapProfiler\heapProfiler.h">
+      <Filter>src\heapProfiler</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\deps\libuv\src\fs-poll.c">
@@ -353,6 +356,9 @@
     <ClCompile Include="..\..\src\module\timer.c">
       <Filter>src\module</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\heapProfiler\heapProfiler.c">
+      <Filter>src\heapProfiler</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\module\io.wren.inc">
@@ -369,6 +375,9 @@
     </None>
     <None Include="..\..\src\module\timer.wren.inc">
       <Filter>src\module</Filter>
+    </None>
+    <None Include="..\..\heapProfiler\heapProfiler.wren.inc">
+      <Filter>src\heapProfiler</Filter>
     </None>
   </ItemGroup>
 </Project>

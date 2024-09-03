@@ -8,6 +8,7 @@
 #include "repl.wren.inc"
 #include "scheduler.wren.inc"
 #include "timer.wren.inc"
+#include "../../heapProfiler/heapProfiler.wren.inc"
 
 extern void directoryList(WrenVM* vm);
 extern void directoryCreate(WrenVM* vm);
@@ -53,6 +54,7 @@ extern void stdinReadStop(WrenVM* vm);
 extern void stdoutFlush(WrenVM* vm);
 extern void schedulerCaptureMethods(WrenVM* vm);
 extern void timerStartTimer(WrenVM* vm);
+extern void heapProfilerSnapshot(WrenVM* vm);
 
 // The maximum number of foreign methods a single class defines. Ideally, we
 // would use variable-length arrays for each class in the table below, but
@@ -192,6 +194,11 @@ static ModuleRegistry modules[] =
   MODULE(timer)
     CLASS(Timer)
       STATIC_METHOD("startTimer_(_,_)", timerStartTimer)
+    END_CLASS
+  END_MODULE
+  MODULE(heapProfiler)
+    CLASS(HeapProfiler)
+      STATIC_METHOD("snapshot()", heapProfilerSnapshot)
     END_CLASS
   END_MODULE
 
